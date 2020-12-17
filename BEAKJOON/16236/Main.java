@@ -70,7 +70,7 @@ public class Main {
 			System.out.println(eatDot.distance);
 			System.out.println(eatDot.x + ", " + eatDot.y);
 			System.out.println();
-			//�԰� ��� �ű��
+			//¸Ô°í »ó¾î ¿Å±â±â
 			map[baby.x][baby.y] = 0;
 			map[eatDot.x][eatDot.y] = 9;
 			baby.x = eatDot.x;
