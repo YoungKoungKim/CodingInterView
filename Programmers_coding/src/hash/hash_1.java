@@ -1,3 +1,4 @@
+package hash;
 /*
 문제 설명
 수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
@@ -28,7 +29,7 @@ mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 �
 
 import java.util.HashMap;
 
-class coding_hash_1 {
+class hash_1 {
     public static String solution(String[] participant, String[] completion) {
         String answer = "";
         
