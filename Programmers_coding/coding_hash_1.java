@@ -28,7 +28,7 @@ mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 �
 
 import java.util.HashMap;
 
-class Solution {
+class coding_hash_1 {
     public static String solution(String[] participant, String[] completion) {
         String answer = "";
         
