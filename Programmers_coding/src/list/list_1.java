@@ -1,6 +1,6 @@
 
 import java.util.*;
-    class Solution {
+    class list_1 {
         public int[] solution(int[] answers) {
             int[] answer = new int[3];
 
