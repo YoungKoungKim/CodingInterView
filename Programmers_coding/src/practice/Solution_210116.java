@@ -1,10 +1,8 @@
 package practice;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-class Solution {
+class Solution_210116 {
     public String solution(int a, int b) {
         String answer = "";
         
