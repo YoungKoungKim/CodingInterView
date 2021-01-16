@@ -1,3 +1,5 @@
+package practice;
+
 class Solution_210115 {
     public String solution(String[] seoul) {
         String answer = "";
