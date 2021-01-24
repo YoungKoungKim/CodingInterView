@@ -16,7 +16,6 @@ class Solution {
         String format = "%0" + n + "d";
         
         for (int i = 0; i < n; i++) {
-        	//map[i] = decToBin(n, arr1[i]);
         	String binaryString1 = String.format(format, Integer.parseInt(Integer.toBinaryString(arr1[i]).toString()));
         	String binaryString2 = String.format(format, Integer.parseInt(Integer.toBinaryString(arr2[i]).toString()));
         	
