@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 public class Solution_NewID {
 	public static void main(String[] args) {
 		Solution sol = new Solution();
-		System.out.println(sol.solution("=.="));
+		System.out.println(sol.solution("......A.....................B..................C........"));
 	}
 }
 
@@ -32,7 +32,7 @@ class Solution {
 			new_id = new_id.replaceFirst("^.", "");
 		}
 		if (new_id.length() > 0) {
-			if (new_id.indexOf(".") == new_id.length()-1) {
+			if (new_id.charAt(new_id.length()-1) == '.') {
 				new_id = new_id.substring(0, new_id.length()-1);
 			}
 		}
@@ -50,7 +50,7 @@ class Solution {
 			new_id = new_id.substring(0, 15);
 		}
 		//System.out.println(new_id);
-		if (new_id.indexOf(".") == new_id.length()-1) {
+		if (new_id.charAt(new_id.length()-1) == '.') {
 			new_id = new_id.substring(0, new_id.length()-1);
 		}
 		
