@@ -40,3 +40,28 @@ DATABASE 구성
 테이블 : 물리적 릴레이션
 
 ## Optimizer
+Optimizer의 종류
+1. Rule Based Optimizer
+2. Cost Based Optimizer
+  : Oracle은 2를 권장한다
+
+eg. 테이블 컬럼에 대한 통계 정보
+SELECT COLUMN_NAME, NUM_DISTINCT, DENSITY
+FROM USER_TAB_COL_STATISTICS
+WHERE TABLE_NAME = 'CUSTOMERS';
+: num_distinct - 컬럼의 unique 한 값의 개수
+
+1. selectivity
+  : DENSITY 에 대한 값
+  SELECT * FROM CUSTOMER WHERE CUST_ID = "";
+  와 같이 조회했을 때 이 조건에 의해서 access 해야 하는 data의 퍼센테이지
+  : 1 / NUM_DISTINCT, 0~1사이의 값
+  : %가 작을 수록 index scan이 선호되며, 클 수록 full scan이 선호된다.
+
+2. cardinality
+  : 처리해야 할 행의 개수
+
+### 실행계획
+콘솔 실행계획
+explain plan for [쿼리];
+실행의 결과가 plan_table 테이블에 저장된다
