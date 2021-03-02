@@ -65,3 +65,16 @@ WHERE TABLE_NAME = 'CUSTOMERS';
 콘솔 실행계획
 explain plan for [쿼리];
 실행의 결과가 plan_table 테이블에 저장된다
+
+## Index
+SELECT ROWID, ROWNUM, EMPLOYEE_ID, FIRST_NAME
+  FROM EMPLOYEES;
+ROWID, ROWNUM : 수도컬럼
+
+SELECT *
+  FROM EMP SAMPLE(10);
+SAMPLE : 각각의 테이블에 대해서 10%의 ROWSAMPLE을 추출한다
+
+SELECT *
+  FROM EMP SAMPLE BLOCK(10);
+BLOCK SAMPLE : 블록 내에서 10%의 BLOCKSAMPLE 을 추출한다
