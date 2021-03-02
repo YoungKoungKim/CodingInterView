@@ -1,0 +1,13 @@
+강사님 메일 freeohh1216@gmail.com
+
+물리적 데이터베이스 : 하드디스크
+작업 영역 Instance : 메모리(SGA)
+-> 꼭 알아두어야 할 메모리 영역
+1. Shared Pool
+2. DB Buffer cash
+3. Ledo log buffer
+
+ORACLE 실행 단계
+1. Parse
+2. execute
+3. fetch (fetch는 select 구문에서만 일어남)
