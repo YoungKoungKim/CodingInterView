@@ -19,6 +19,7 @@ alter session set statistics_level = all;
 4. 인덱스 빠른 전체 스캔
 5. 인덱스 조인
 6. 인덱스 스킵 스캔
+  : 불필요한 leaf scan은 하지 않고, leaf와 branch의 값을 인덱스 탐색에 섞어서 적절히 사용한다.
 
 E-Rows : estimate rows 처리를 위해 예상되는 데이터의 건수
 A-Rows : acutial rows 실체 처리한 데이터의 건수
@@ -39,3 +40,8 @@ e-rows와 a-rows 차이가 없으면 통계가 잘 만들어져 있다고 이야
   select /*+ full(customers) */ cust_city, cust_year_of_birth, cust_id
   from customers
   where cust_last_name LIKE 'S%';
+
+- 인덱스 스캔 불가
+  : 부정형 비교, 인덱스 컬럼의 변형이 일어난 경우
+  : 데이터 컬럼의 데이터 형식이 맞지 않은 경우
+  ||, where col(숫자,날짜) like, upper, lower, initcap, substr, instr, lpad, rpad
