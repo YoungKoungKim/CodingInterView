@@ -18,3 +18,5 @@
 5. check
 
 ## 서브쿼리
+1. 서브쿼리 IN, EXISTS 사용시 SEMI 조인 발생
+2. NOT IN, NOT EXISTS 사용시 ANTI 조인 발생
