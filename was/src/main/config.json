@@ -1,0 +1,16 @@
+{
+	"num_thread" : 50,
+	"root_directory" : {
+						"default" : "src/main",
+						"127.0.0.1" : "src/main/localHostAddr",
+						"localhost" : "src/main/localHostDns"
+	},
+	"welcome_file" : "index.html",
+	"port" : 3000,
+	"error_page" : "error.html",
+	"error" : {
+		"404" : {
+				"error_msg" : "page not found"
+		}
+	}
+}
